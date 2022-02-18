@@ -1,0 +1,10 @@
+.close {
+  width: 15px;
+  height: 15px;
+  border: none;
+  background-color: white;
+}
+.close-icon {
+  width: 15px;
+  height: 15px;
+}
