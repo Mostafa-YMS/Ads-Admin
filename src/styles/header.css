@@ -1,0 +1,14 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9vh;
+    color: hsl(26, 100%, 55%);
+    background-color: white;
+}
+.btn-create{
+    background-color: hsl(26, 100%, 55%) !important;
+    color: white !important;
+    position: absolute;
+    right: 3%;
+}

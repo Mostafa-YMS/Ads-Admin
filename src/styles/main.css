@@ -1,0 +1,5 @@
+body {
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: hsl(25, 100%, 94%) !important;
+}

@@ -1,0 +1,32 @@
+.ads {
+  margin: 10px 0px;
+  padding: 10px;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  background-color: hsl(223, 64%, 98%) ;
+  overflow: auto;
+}
+.img-div {
+    height: 50%;
+    margin-top: 10px;
+  }
+  .img {
+    height: 100%;
+  }
+  .info{
+      margin-top: 10px;
+      font-size: 1.3rem;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+  }
+  .hr{
+      width: 80%;
+      border-radius: 30%;
+  }
+  .btns-div{
+      /* height: 20%; */
+      display: flex;
+      justify-content: space-between;
+  }
