@@ -1,4 +1,4 @@
-import { intialData } from "./constants";
+import { Create_Ad, intialData } from "./constants";
 import axios from "axios";
 
 export function getIntialData() {
@@ -14,3 +14,11 @@ export function getIntialData() {
     }
   };
 }
+
+export function createAd(newAd) {
+  return {
+    type: Create_Ad,
+    payload: newAd,
+  };
+}
+
