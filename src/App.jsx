@@ -1,21 +1,19 @@
-import { useSelector } from "react-redux";
-import { Ad } from "./components/Ad";
+import { Route, Routes } from "react-router-dom";
+import AdsPage from "./pages/AdsPage";
 import Header from "./components/Header";
 import "./styles/main.css";
+import CreationForm from "./components/CreationForm";
 
 function App() {
-  const ads = useSelector((state) => state);
-
   return (
     <>
-    <Header/>
-    <div className="container">
-      <div className="row">
-        {ads.map((ad, index) => (
-          <Ad ad={ad} key={index}/>
-        ))}
+      <Header />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<AdsPage />} />
+          <Route path="/create" element={<CreationForm />} />
+        </Routes>
       </div>
-    </div>
     </>
   );
 }

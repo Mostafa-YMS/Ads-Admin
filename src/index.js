@@ -8,12 +8,15 @@ import "bootstrap/dist/js/bootstrap.bundle";
 import { Provider } from "react-redux";
 import { store } from "./ads-redux/store";
 import { getIntialData } from "./ads-redux/actions/creators";
+import { BrowserRouter } from "react-router-dom";
 
 store.dispatch(getIntialData());
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>,
   document.getElementById("root")
 );
