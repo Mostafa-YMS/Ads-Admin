@@ -1,5 +1,12 @@
-import '../styles/ad.css'
-export const Ad = ({ ad }) => {
+import "../styles/ad.css";
+import { useDispatch } from "react-redux";
+import { deleteAd } from "../ads-redux/actions/creators";
+
+export const Ad = ({ ad, index }) => {
+  const dispatch = useDispatch();
+  const adDelete = () => {
+    dispatch(deleteAd(index));
+  };
   return (
     <div className="col-md-4">
       <div className="ads card">
@@ -12,7 +19,7 @@ export const Ad = ({ ad }) => {
             </video>
           )}
         </div>
-        <hr className="hr"/>
+        <hr className="hr" />
         <div className="info">
           <p>
             Start at: <span>{ad.from_time}</span>
@@ -21,9 +28,11 @@ export const Ad = ({ ad }) => {
             End at: <span>{ad.to_time}</span>
           </p>
         </div>
-        <div className='btns-div'>
-            <button className="btn btn-primary m-3">Update</button>
-            <button className="btn btn-danger m-3">Delete</button>
+        <div className="btns-div">
+          <button className="btn btn-primary m-3">Update</button>
+          <button className="btn btn-danger m-3" onClick={adDelete}>
+            Delete
+          </button>
         </div>
       </div>
     </div>

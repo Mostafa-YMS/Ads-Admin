@@ -8,7 +8,7 @@ const AdsPage = () => {
   return (
     <div className="row">
       {ads.map((ad, index) => (
-        <Ad ad={ad} key={index} />
+        <Ad ad={ad} index={index} key={index} />
       ))}
     </div>
   );
