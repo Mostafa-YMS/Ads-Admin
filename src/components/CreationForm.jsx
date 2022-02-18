@@ -1,52 +1,28 @@
-import { useState } from "react";
 import { Input } from "./Input";
-import { useDispatch } from "react-redux";
-import { createAd } from "../ads-redux/actions/creators";
-import { useNavigate } from "react-router-dom";
 
-const CreationForm = () => {
-  const [media, setMedia] = useState("");
-  const [mediaType, setMediaType] = useState("image");
-  const [startTime, setStartTime] = useState("");
-  const [endTime, setEndTime] = useState("");
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  const timeReformate = (time) => {
-    let newTime = new Date(time).toLocaleString();
-    newTime = newTime.split(",");
-    return newTime[0] + newTime[1];
-  };
-
-  const dispatcher = (finalMedia) => {
-    dispatch(
-      createAd({
-        image: finalMedia.image,
-        video: finalMedia.video,
-        from_time: timeReformate(startTime),
-        to_time: timeReformate(endTime),
-      })
-    );
-  };
-
-  const create = (e) => {
-    e.preventDefault();
-    if (mediaType === "image") {
-      dispatcher({ image: media, video: "" });
-    } else {
-      dispatcher({ image: "", video: media });
-    }
-    navigate("/");
-  };
+const CreationForm = ({
+  media,
+  setMedia,
+  mediaType,
+  setMediaType,
+  startTime,
+  setStartTime,
+  endTime,
+  setEndTime,
+  btn,
+  handleSubmit,
+}) => {
+  
   return (
     <div>
-      <form onSubmit={create}>
+      <form onSubmit={handleSubmit}>
         <div className="form-group m-3">
           <label>Media type</label>
           <select
             required
             className="form-select"
+            defaultValue={mediaType}
             onChange={(e) => setMediaType(e.target.value)}
           >
             <option value="image">Image</option>
@@ -74,7 +50,7 @@ const CreationForm = () => {
           value={endTime}
         />
         <button type="submit" className="btn btn-primary m-3">
-          Create
+          {btn}
         </button>
       </form>
     </div>

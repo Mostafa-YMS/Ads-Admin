@@ -2,7 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import AdsPage from "./pages/AdsPage";
 import Header from "./components/Header";
 import "./styles/main.css";
-import CreationForm from "./components/CreationForm";
+import CreatePage from "./pages/CreatePage";
+import UpdatePage from "./pages/UpdatePage";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<AdsPage />} />
-          <Route path="/create" element={<CreationForm />} />
+          <Route path="/create" element={<CreatePage />} />
+          <Route path="/update" element={<UpdatePage />} />
         </Routes>
       </div>
     </>

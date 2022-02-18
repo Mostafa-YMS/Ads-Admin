@@ -1,7 +1,6 @@
 import { Ad } from "../components/Ad";
 import { useSelector } from "react-redux";
 
-
 const AdsPage = () => {
   const ads = useSelector((state) => state);
 
