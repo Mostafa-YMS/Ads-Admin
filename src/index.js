@@ -9,13 +9,16 @@ import { Provider } from "react-redux";
 import { store } from "./ads-redux/store";
 import { getIntialData } from "./ads-redux/actions/creators";
 import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
 
 store.dispatch(getIntialData());
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")

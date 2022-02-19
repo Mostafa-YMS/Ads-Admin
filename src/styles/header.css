@@ -10,5 +10,11 @@
     background-color: hsl(26, 100%, 55%) !important;
     color: white !important;
     position: absolute;
+    left: 3%;
+}
+.btn-logout{
+    background-color: hsl(337, 87%, 27%) !important;
+    color: white !important;
+    position: absolute;
     right: 3%;
 }
