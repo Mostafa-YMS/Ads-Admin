@@ -7,7 +7,7 @@ import { render } from "@testing-library/react";
 
 it("renders without crashing", () => {
    act(() => {
-    const { getByText, getByLabelText } = render(
+    const { getByText } = render(
       <MemoryRouter>
         <AuthProvider>
           <Header />

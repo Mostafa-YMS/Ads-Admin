@@ -12,7 +12,7 @@ it("renders without crashing", () => {
     from_time: "12/05/2021 06:25:00 PM",
     to_time: "12/05/2021 06:27:00 PM",
   };
-  const { getByText, getByLabelText } = render(
+  const { getByText } = render(
     <MemoryRouter>
       <Provider store={store}>
         <Ad ad={ad} index={1} />

@@ -7,11 +7,3 @@ it("renders without crashing", () => {
   getByText("or login with phone number");
   getByText("Submit");
 });
-
-// it("renders change on expanding", () => {
-//   const { getByText, getByPlaceholderText } = render(<PhoneLogin />);
-//   getByText("or login with phone number");
-//   fireEvent.change(getByPlaceholderText("Phone number"), { target: { value: "+201152935995" }});
-//   fireEvent.click(getByText("Submit"));
-//   getByText("Login");
-// });
