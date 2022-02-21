@@ -1,4 +1,4 @@
-# Ads Manager
+# Ads Admin
 
 ## Description:
 
