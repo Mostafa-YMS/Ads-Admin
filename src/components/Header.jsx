@@ -21,7 +21,7 @@ const Header = () => {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="header">
+    <header data-testid="header" className="header">
       <h1 className="title">Ads Dashboard</h1>
       {user && (
         <>
@@ -33,7 +33,7 @@ const Header = () => {
           </button>
         </>
       )}
-    </div>
+    </header>
   );
 };
 

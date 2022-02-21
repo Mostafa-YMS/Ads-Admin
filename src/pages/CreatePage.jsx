@@ -61,7 +61,7 @@ const CreatePage = () => {
         endTime={endTime}
         setEndTime={setEndTime}
         handleSubmit={create}
-        btn={"Update"}
+        btn={"Create"}
       />
     </div>
   );

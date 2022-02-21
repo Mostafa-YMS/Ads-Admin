@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { signUp } from "../firebase";
 import "../styles/signup.css";
 import { useNavigate } from "react-router-dom";
+import PhoneLogin from "../components/PhoneLogin";
 
 const SignUp = () => {
   const emailRef = useRef();
@@ -52,6 +53,7 @@ const SignUp = () => {
           Register
         </button>
       </div>
+      <PhoneLogin />
     </>
   );
 };
