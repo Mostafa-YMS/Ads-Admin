@@ -14,12 +14,7 @@ import { useEffect } from "react";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB2nBne-diK3eD3X2f-3CUEklfzdjREgp4",
-  authDomain: "ads-manager-dadb3.firebaseapp.com",
-  projectId: "ads-manager-dadb3",
-  storageBucket: "ads-manager-dadb3.appspot.com",
-  messagingSenderId: "670259747284",
-  appId: "1:670259747284:web:61b6913cb991190f375e41",
+  
 };
 
 // Initialize Firebase
