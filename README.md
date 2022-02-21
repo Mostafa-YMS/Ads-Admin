@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Ads Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description:
 
-## Available Scripts
+Ads models which are being displayed
+on digital advertising screen due to specific timeline and being controlled via React.js Admin-dashboard website
 
-In the project directory, you can run:
+## Function:
 
-### `npm start`
+The authenticated site admin can:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Full Authentication using Firebase && Login using
+2. mobile verification
+3. List screen ads
+4. Update existing screen ads
+5. Delete existing screen ads
+6. Create new screen ads
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Components:
 
-### `npm test`
+### 1. Ad:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Takes the Ad data and return a card div displaying the data.
 
-### `npm run build`
+### 2. CreationForm:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It returns Ad form, and to make it reusable and reuse it in update page it take the states from the page in update bage the states is intialized with the Ad data to be updated.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. Header:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+It return the header of the application containing a title and two buttons appear upon authentication, logout button, and Create Add button.
 
-### `npm run eject`
+### 4. Input:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Takes the state, placeholder, label and type. It returns an input group(input and label).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 5. PhoneLogin:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Returns phone authentication form in a card div.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Context:
 
-## Learn More
+### AuthContext:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Provide the authenticated user data.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Pages:
 
-### Code Splitting
+### 1. AdsPage:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Subscribe to redux store and return the Ads in Ad components.
 
-### Analyzing the Bundle Size
+### 2. CreatePgae:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Returns the creation form when submit dispatch a new add to the redux store.
 
-### Making a Progressive Web App
+### 3. Login:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Returns login with email form and phone login form on successfully submiting any of them the user get authenticated and redirected to the ads page.
 
-### Advanced Configuration
+### 4. SignUp:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Returns signup with email form and login with phone form on successfully submiting any of them the user get authenticated and redirected to the ads page.
 
-### Deployment
+### 5. UpdatePage:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Returns creation form prefilled with the ad data to be updated on submitting the new data get dispatched to redux store and update the ad.
 
-### `npm run build` fails to minify
+## Utils:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 1. LoggedInRoute:
+
+Custom route to prevented logged in user from reaching the login or signup pages.
+
+### 2. ProtectedRoute:
+
+Custom route to prevented unauthenticated users from reaching the ads, creation or updating pages.
+
+## App:
+
+Returns the Header and Routes components.
+
+## firebase.js:
+
+contain the firebase api config and the code responsible for full authentication.
+
+## Testing:
+
+Used Jest and React testing library.
+
+## Installation and running:
+
+After cloning run:
+
+`npm install`
+
+then
+
+`npm start`
+
+and `npm test` for testing.
