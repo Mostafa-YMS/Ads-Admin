@@ -21,7 +21,7 @@ export const Ad = ({ ad, index }) => {
             <img src={ad.image} className="img" alt="ad" />
           ) : (
             <video width="100%" height="100%" controls>
-              {/* <source src={ad.video} type="video/mp4"/> */}
+              <source src={ad.video} type="video/mp4" />
             </video>
           )}
         </div>
