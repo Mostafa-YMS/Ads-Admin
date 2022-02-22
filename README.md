@@ -94,6 +94,8 @@ After cloning run:
 
 `npm install`
 
+`Add your firebase configurations in firebase.js`
+
 then
 
 `npm start`
