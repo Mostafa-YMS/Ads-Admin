@@ -102,10 +102,4 @@ then
 
 and `npm test` for testing.
 
-use for login :
-
-Email: eve.holt@reqres.in
-
-Password: cityslicka
-
 `NOTE`: open in disabled security browser
